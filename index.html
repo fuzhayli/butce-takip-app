@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bütçe Takip Uygulaması</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aylık Bütçe Takibi</h1>
+
+        <div class="budget-section">
+            <h2>Başlangıç Bütçeleri (Aylık)</h2>
+            <div>
+                <label for="anaKartBaslangic">Ana Kart Bütçesi (TL):</label>
+                <input type="number" id="anaKartBaslangic" value="15000">
+            </div>
+            <div>
+                <label for="multinetBaslangic">Multinet Bütçesi (TL):</label>
+                <input type="number" id="multinetBaslangic" value="6000">
+            </div>
+            <button id="baslangicAyarla">Başlangıç Bütçelerini Ayarla ve Hesaplamayı Başlat</button>
+            <p class="info">Not: Her ay başında buradaki değerleri güncelleyip butona tıklayarak yeniden başlatın.</p>
+        </div>
+
+        <div class="current-budget-section">
+            <h2>Güncel Durum</h2>
+            <p>Tarih: <span id="bugununTarihi"></span></p>
+            <div class="budget-display">
+                <h3>Ana Kart</h3>
+                <p>Aylık Kalan: <span id="anaKartAylikKalan">0</span> TL</p>
+                <p>Bugünkü Bütçe: <span id="anaKartGunlukButce">0</span> TL</p>
+                <p>Bugüne Kadarki Toplam Kullanılabilir: <span id="anaKartToplamKullanilabilir">0</span> TL</p>
+            </div>
+            <div class="budget-display">
+                <h3>Multinet</h3>
+                <p>Aylık Kalan: <span id="multinetAylikKalan">0</span> TL</p>
+                <p>Bugünkü Bütçe: <span id="multinetGunlukButce">0</span> TL</p>
+                <p>Bugüne Kadarki Toplam Kullanılabilir: <span id="multinetToplamKullanilabilir">0</span> TL</p>
+            </div>
+        </div>
+
+        <div class="expense-section">
+            <h2>Harcama Ekle</h2>
+            <div>
+                <label for="kartSecimi">Kart Seçimi:</label>
+                <select id="kartSecimi">
+                    <option value="anaKart">Ana Kart</option>
+                    <option value="multinet">Multinet</option>
+                </select>
+            </div>
+            <div>
+                <label for="harcamaMiktari">Harcama Miktarı (TL):</label>
+                <input type="number" id="harcamaMiktari" required>
+            </div>
+            <div>
+                <label for="harcamaAciklamasi">Açıklama (İsteğe Bağlı):</label>
+                <input type="text" id="harcamaAciklamasi">
+            </div>
+            <div>
+                <label for="harcamaTarihi">Harcama Tarihi:</label>
+                <input type="date" id="harcamaTarihi" required>
+            </div>
+            <button id="harcamaEkleBtn">Harcamayı Ekle</button>
+        </div>
+
+        <div class="history-section">
+            <h2>Harcama Geçmişi</h2>
+            <ul id="harcamaListesi">
+                </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 700px;
+}
+
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.budget-section div,
+.expense-section div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="date"],
+select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+#baslangicAyarla {
+    background-color: #007bff;
+}
+
+#baslangicAyarla:hover {
+    background-color: #0056b3;
+}
+
+.info {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.current-budget-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #e9f7ef;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.current-budget-section h2 {
+    margin-top: 0;
+}
+
+.budget-display {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.budget-display h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.budget-display p {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+.budget-display span {
+    font-weight: bold;
+}
+
+#anaKartGunlukButce.negatif, #anaKartToplamKullanilabilir.negatif,
+#multinetGunlukButce.negatif, #multinetToplamKullanilabilir.negatif {
+    color: red;
+}
+
+.history-section {
+    margin-top: 30px;
+}
+
+#harcamaListesi {
+    list-style-type: none;
+    padding: 0;
+}
+
+#harcamaListesi li {
+    background-color: #f9f9f9;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+#harcamaListesi li:last-child {
+    border-bottom: none;
+}
+
+#harcamaListesi .aciklama {
+    font-style: italic;
+    color: #555;
+    font-size: 0.9em;
+}
+
+#harcamaListesi .tutar {
+    font-weight: bold;
+}
+
+#harcamaListesi .tarih {
+    font-size: 0.9em;
+    color: #777;
+}
